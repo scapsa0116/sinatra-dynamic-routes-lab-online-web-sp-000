@@ -32,17 +32,17 @@ get '/say/:number/:phrase' do
   
  get '/:operation/:number1/:number2' do
     @oper = params[:operation]
-    @num1 = params[:number1].to_i
-    @num2 = params[:number2].to_i
+    @num_1 = params[:number1].to_i
+    @num_2 = params[:number2].to_i
     case @oper
       when "subtract"
-        (@num1 - @num2).to_s
+        (@num_1 - @num_2).to_s
       when "add"
-        (@num1 + @num2).to_s
+        (@num_1 + @num_2).to_s
       when "multiply"
-        (@num1 * @num2).to_s
+        (@num_1 * @num_2).to_s
       when "divide"
-        (@num1 / @num2).to_s
+        (@num_1 / @num_2).to_s
     end
   end
 end 
